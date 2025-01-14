@@ -1,15 +1,10 @@
 ---
-title: "Ahoy There!"
+title: "Saurabh Yadav"
 draft: false
 ---
-Lowkey is a Clean and Simple Hugo theme inspired by [Adam Wathan's](https://adamwathan.me/) Website. Suitable for use as a personal blog, portofolio, etc. 
 
-This theme uses TailwindCSS, so it's easy to customize.
+**Saurabh Yadav**
+Site Reliability Engineer
 
-If you are interested in using this theme, you can get it on [GitHub](#).
-
-**Example Description:**
-
-Alex Lowkey is a professor of artificial intelligence at the Unknow AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum. The point of using Lorem Ipsum. distracted by the readable content of a page.
+**Summary:**
+Experienced engineer with hands-on experience in managing mission-critical applications across leading cloud platforms such as AWS, Azure, and DigitalOcean. My proficiency shines through in orchestrating seamless cloud deployments, implementing effective alerting and monitoring strategies, crafting Helm charts for scalable applications, and establishing robust CI/CD pipelines. My proactive approach ensures swift issue resolution and the achievement of easy application deployment.
