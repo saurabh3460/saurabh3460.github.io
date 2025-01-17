@@ -11,4 +11,4 @@ Experienced engineer with hands-on experience in managing mission-critical appli
 
 **RPi Panels**
 
-<iframe src="https://app.last9.io/api/gp/d-solo/rYdddlPWk/node-exporter-full?orgId=2352&refresh=1m&from=1737138730315&to=1737140530315&theme=dark&panelId=158" width="450" height="200" frameborder="0"></iframe>
+<iframe src="https://app.last9.io/api/gp/d-solo/rYdddlPWk/node-exporter-full?orgId=2352&refresh=1m&from=1737139077929&to=1737140877929&theme=dark&panelId=158" width="450" height="200" frameborder="0"></iframe>
