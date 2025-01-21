@@ -1,49 +1,32 @@
 [[main]]
-    identifier = "home"
-    name = "Home"
+    identifier = "about"
+    name = "About"
     url = "/"
     weight = 1
 
 [[main]]
-    identifier = "about"
-    name = "About me"
-    url = "/about"
+    identifier = "writing"
+    name = "Writing"
+    url = "/writing"
     weight = 2
-
-[[main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories"
-    weight = 3
-
-[[main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 4
-
-[[main]]
-    identifier = "donate"
-    name = "Donate"
-    url = "https://ko-fi.com/nixentric"
-    weight = 5
     
 # Social Media Configuration
 
 [[social]]
-    identifier = "twitter"
-    name = "Twitter"
-    url = "#"
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/saurabh3460"
     weight = 1
 
 [[social]]
-    identifier = "instagram"
-    name = "Instagram"
-    url = "#"
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://x.com/saurabh3460"
     weight = 2
 
 [[social]]
-    identifier = "github"
-    name = "GitHub"
-    url = "#"
+    identifier = "linkedin"
+    name = "Linkedin"
+    url = "https://www.linkedin.com/in/saurabh-y-311635114/"
     weight = 3
+
