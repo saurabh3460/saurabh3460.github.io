@@ -1,4 +1,4 @@
-baseURL = 'https://asyncio.blog/'
+baseURL = 'https://saurabhtech.com/'
 copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
 languageCode = 'en-US'
 defaultContentLanguage = 'en'
@@ -8,6 +8,9 @@ enableRobotsTXT = true
 summaryLength = 15
 paginate = 5
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-ZTER0MHY1L'
 
 [markup]
   [markup.highlight]
