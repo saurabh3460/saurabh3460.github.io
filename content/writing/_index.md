@@ -1,5 +1,5 @@
 ---
-title: "Post"
-header: "Latest Posts" # Optional
+title: "writing"
+header: "" # Optional
 ---
 See What I’ve Written Lately
