@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes API Structure Explained"
 draft: false
-date: 2025-04-23T14:49:00.000Z
+date: 2025-04-23T15:10:00+05:30
 description: "A comprehensive guide to understanding Kubernetes API architecture, covering API groups, resources, kinds, and key concepts like GVK and GVR. Perfect for developers working with Kubernetes."
 ---
 
