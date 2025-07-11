@@ -10,7 +10,7 @@
     url = "/writing"
     weight = 2
     
-# Social Media Configuration
+# Social Media configuration
 
 [[social]]
     identifier = "github"
