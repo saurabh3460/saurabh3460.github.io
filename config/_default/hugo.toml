@@ -6,7 +6,8 @@ theme = 'enchanted-lowkey'
 title = 'Saurabh | Native to the Cloud'
 enableRobotsTXT = true
 summaryLength = 15
-paginate = 5
+[pagination]
+  pagerSize = 5
 
 [services]
   [services.googleAnalytics]
