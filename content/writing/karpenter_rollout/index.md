@@ -5,15 +5,13 @@ date: 2026-06-19T15:10:00+05:30
 description: "A short practical summary of migrating from old Karpenter and ASG node groups to Karpenter v1.7.2, covering safe cutover, v1 API changes, disruption budgets, GitLab runner cost issues, and workload-specific node pools."
 ---
 
-# Karpenter Rollout — The Journey
-
 **Goal.** Replace old Karpenter `v0.34` and ASG node groups with Karpenter `v1.7.2` across non-prod and prod — with no CI/CD downtime.
 
 ## The Safe Cutover
 
 A Managed Node Group sat under `shared-cluster` as fallback.
 
-Key insight: only pods pinned via `nodeSelector` needed touching — tolerations don’t force scheduling.
+Key insight: only pods pinned via `nodeSelector` needed touching, tolerations don’t force scheduling.
 
 Remove the `nodeSelector`s, workloads drift to the Managed Node Group, and old Karpenter can be torn down safely.
 
@@ -30,9 +28,23 @@ Predictable breakages appeared during the migration:
 
 We versioned the base as `prod-base-v1.7.2` instead of editing in place, so old `v1beta1` clusters kept working during the rollout.
 
+## The Custom Networking Problem and `RESERVED_ENIS`
+With AWS VPC CNI custom networking, pod IPs came from secondary ENIs via ENIConfig, while the primary ENI stayed with the node. Karpenter was still calculating pod density as if all ENIs were available, so it overestimated node capacity. As a result, Kubernetes scheduled more pods than AWS CNI could assign IPs for, causing pod sandbox/IP assignment failures.
+
+The fix was to configure Karpenter with:
+
+```yaml
+RESERVED_ENIS: "1"
+```
+
+**Before:** Karpenter thought the node had more pod IP capacity than AWS CNI could actually provide. <br/>
+**After:** `RESERVED_ENIS=1` made Karpenter subtract one ENI from capacity calculation. <br/>
+**Result:** Pods scheduled according to real available ENI/IP capacity, so IP allocation failures stopped.
+
+
 ## The Cost Surprise on Shared Cluster
 
-GitLab runner bursts landed short-lived CI pods on the general `karpenter-nodepool` — the same pool used by long-lived apps.
+GitLab runner bursts landed short-lived CI pods on the general `karpenter-nodepool` the same pool used by long-lived apps.
 
 Karpenter launched big `4xlarge` nodes for the burst. When the jobs finished in around 10–30 minutes, those nodes went idle.
 
