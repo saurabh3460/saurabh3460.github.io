@@ -1,15 +1,14 @@
 [[main]]
-    identifier = "writing"
-    name = "Writing"
+    identifier = "about"
+    name = "About"
     url = "/"
     weight = 1
 
 [[main]]
-    identifier = "about"
-    name = "About Me"
-    url = "/about"
+    identifier = "writing"
+    name = "Writing"
+    url = "/writing"
     weight = 2
-
     
 # Social Media configuration
 
