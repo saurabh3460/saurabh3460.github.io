@@ -1,4 +1,3 @@
-````markdown
 ---
 title: "Karpenter Rollout"
 draft: false
@@ -86,5 +85,3 @@ If it is too strict, you may end up paying for idle nodes.
 
 Do not mix ephemeral workloads and long-lived workloads in one pool. Isolate them and match the consolidation policy to each workload type.
 
-```
-```
